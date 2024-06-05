@@ -17,5 +17,28 @@ describe("tests in cypress playground", () => {
 
     // ignore errors
     cy.get(":nth-child(2) > .form-control").type("test", { force: true });
+
+    cy.get(".action-form > .btn").click();
+
+    cy.get(".action-form")
+      .next()
+      .should("contain", "Your form has been submitted!");
+
+    cy.get("#action-canvas").click();
+
+    cy.get("#action-canvas").click("topLeft");
+
+    cy.get("#action-canvas").click(80, 165);
+
+    cy.get(".action-div").dblclick();
+    // cy.contains("Double click to edit").should("not.be.visible");
+    cy.get(".action-div").should("not.be.visible");
+    cy.get(".action-input-hidden").should("be.visible");
+
+    cy.get(".action-checkboxes > :nth-child(1) > label").click();
+
+    cy.get(".action-checkboxes > :nth-child(1) > label > input").should(
+      "be.checked"
+    );
   });
 });

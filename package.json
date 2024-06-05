@@ -1,0 +1,13 @@
+{
+  "name": "cypress-tests-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "savio <saviopf22@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "dependencies": {
+    "cypress": "^13.11.0"
+  }
+}
